@@ -3,7 +3,7 @@ package fecha;
 import java.util.Calendar;
 import java.util.Date;
 
-public class JspCalendar {
+/*public class JspCalendar {
 
     Calendar  calendar = null;
 
@@ -134,5 +134,35 @@ public class JspCalendar {
     public int getAMPM() {
         return calendar.get(Calendar.AM_PM);
     }
+}*/
+
+
+import java.util.Calendar;
+import java.util.Date;
+
+public class JspCalendar {
+    Calendar calendar;
+
+    public JspCalendar() {
+        calendar = Calendar.getInstance();
+        calendar.setTime(new Date());
+    }
+
+    public int getYear() {
+        return calendar.get(Calendar.YEAR);
+    }
+
+    public int getMonthInt() {
+        return 1 + calendar.get(Calendar.MONTH);
+    }
+
+    public int getDayOfMonth() {
+        return calendar.get(Calendar.DAY_OF_MONTH);
+    }
+
+    public String getDate() {
+        return getMonthInt() + "/" + getDayOfMonth() + "/" + getYear();
+    }
 }
+
 
