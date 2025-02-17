@@ -1,0 +1,78 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+}
+
+/* Estilos para header, sections y footer */
+header, section, footer {
+    margin: 20px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+}
+
+/* Estilos para el encabezado */
+header h1 {
+    margin: 0;
+    color: #333;
+}
+
+/* Estilos para los títulos de sección */
+section h2 {
+    margin-top: 0;
+    color: #444;
+}
+
+/* Estilos para el formulario */
+form div {
+    margin-bottom: 10px;
+}
+
+label {
+    display: inline-block;
+    width: 150px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"] {
+    padding: 5px;
+    width: 200px;
+}
+
+/* Estilos para los botones */
+button {
+    padding: 10px 15px;
+    background: #007BFF;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* Estilos para la lista de elementos */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+/* Estilos para el pie de página */
+footer {
+    text-align: center;
+    font-size: 0.9em;
+    color: #777;
+}
