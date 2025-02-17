@@ -50,7 +50,6 @@ section div {
     margin-top: 15px;
 }
 
-
 section div a:hover {
     background: #007BFF;
     color: white;
@@ -129,8 +128,9 @@ ul li {
     transition: transform 0.3s ease-in-out;
 }
 
+/* ======== HOVER para ampliar la caja del usuario ======== */
 ul li:hover {
-    transform: scale(1.03);
+    transform: scale(1.1);
 }
 
 /* Imagen alineada a la izquierda con mayor tamaño */
@@ -149,10 +149,20 @@ ul li .info {
     color: #333;
 }
 
-/* Estilos para los títulos dentro de la lista */
-ul li strong {
+/* ======== Estilos para el signo zodiacal ======== */
+ul li .zodiaco {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
     color: #007BFF;
-    font-size: 18px;
+    margin-top: 10px;
+}
+
+ul li .zodiaco img {
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
 }
 
 /* ======== Footer ======== */
