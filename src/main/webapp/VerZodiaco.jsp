@@ -1,35 +1,51 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page import="java.util.ArrayList, java.util.List" %>
+<%@ page import="java.time.LocalDate" %>
+<%@ page import="org.example.practica9.Persona" %>
+<%@ page import="fecha.JspCalendar" %>
+
+<jsp:useBean id="calendar" class="fecha.JspCalendar" />
+
+<%
+    // Lista de personas precargada
+    List<Persona> personas = new ArrayList<>();
+    personas.add(new Persona("Carlos", "Gómez", LocalDate.of(1990, 3, 15)));
+    personas.add(new Persona("Ana", "López", LocalDate.of(1985, 7, 22)));
+    personas.add(new Persona("Pedro", "Martínez", LocalDate.of(2000, 11, 5)));
+
+    request.setAttribute("personas", personas);
+%>
+
 <!DOCTYPE html>
-<html  lang="es">
+<html lang="es">
 <head>
-    <title>Page Title</title>
+    <meta charset="UTF-8">
+    <title>Ver Signo Zodiacal</title>
 </head>
 <body>
-<%@page language="java" import="java.util.*" %>
-<H1>Bienvenido a JSPCalendar</H1>
+<h1>Signo Zodiacal de las Personas</h1>
+<p>Fecha actual: <%= calendar.getDate() %></p>
 
-<P>Hoy es</P>
-<jsp:useBean id="zoodiaco" class="fecha.JspCalendar" />
+<table border="1">
+    <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Fecha de Nacimiento</th>
+        <th>Edad</th>
+        <th>Signo Zodiacal</th>
+    </tr>
+    <% for (Persona p : personas) { %>
+    <tr>
+        <td><%= p.getNombre() %></td>
+        <td><%= p.getApellido() %></td>
+        <td><%= p.getFechaNacimiento() %></td>
+        <td><%= p.calcularEdad() %></td>
+        <td><%= p.getSignoZodiaco() %></td>
+    </tr>
+    <% } %>
+</table>
 
-<UL>
-    <LI>D�a: <%= zoodiaco.getDayOfMonth() %>
-    <LI>Mes: <%= zoodiaco.getMonthInt() %>
-    string signo;
-    switch (mes) {
-    case 1:  (dia < 20) ? signo="Capricornio" : signo="Acuario";
-    case 2: return (dia < 19) ? "Acuario" : "Piscis";
-    case 3: return (dia < 21) ? "Piscis" : "Aries";
-    case 4: return (dia < 20) ? "Aries" : "Tauro";
-    case 5: return (dia < 21) ? "Tauro" : "Géminis";
-    case 6: return (dia < 21) ? "Géminis" : "Cáncer";
-    case 7: return (dia < 23) ? "Cáncer" : "Leo";
-    case 8: return (dia < 23) ? "Leo" : "Virgo";
-    case 9: return (dia < 23) ? "Virgo" : "Libra";
-    case 10: return (dia < 23) ? "Libra" : "Escorpio";
-    case 11: return (dia < 22) ? "Escorpio" : "Sagitario";
-    case 12: return (dia < 22) ? "Sagitario" : "Capricornio";
-    default: return "Desconocido";
-    }
-
-</UL>
-<%-- Check for AM or PM --%>
-    <%! int time = Calendar.getInstance().get(Calendar.AM_PM); %>
+<br>
+<a href="index.jsp">Volver</a>
+</body>
+</html>
