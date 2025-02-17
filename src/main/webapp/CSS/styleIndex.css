@@ -1,0 +1,140 @@
+/* ======== Estilos Generales ======== */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #e3f2fd; /* Fondo suave en azul */
+    color: #333;
+}
+
+/* ======== Contenedores Principales ======== */
+header, section, footer {
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    max-width: 800px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* ======== Header ======== */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    color: #007BFF;
+    font-size: 28px;
+}
+
+header p {
+    margin: 5px 0;
+    color: #555;
+    font-size: 16px;
+}
+
+/* ======== Navegación ======== */
+section h2 {
+    color: #444;
+}
+
+section div {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+
+section div a:hover {
+    background: #007BFF;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* ======== Formulario ======== */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+form div {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    gap: 10px;
+}
+
+label {
+    font-weight: bold;
+    width: 120px;
+}
+
+input[type="text"], input[type="date"] {
+    padding: 8px;
+    width: 220px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+input[type="text"]:focus, input[type="date"]:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* ======== Botón Estilizado ======== */
+button {
+    padding: 12px 18px;
+    background: #007BFF;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+/* ======== Lista de Elementos ======== */
+ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+ul li {
+    background: #f8f9fa;
+    border-left: 5px solid #007BFF;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+ul li:hover {
+    background: #e3f2fd;
+}
+
+/* ======== Footer ======== */
+footer {
+    text-align: center;
+    font-size: 0.9em;
+    color: #555;
+    padding: 15px;
+    margin-top: 20px;
+    border-top: 2px solid #007BFF;
+    background: #f8f9fa;
+    border-radius: 0 0 10px 10px;
+}

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>Página de Bienvenida</title>
     <!-- Se vincula el archivo CSS externo -->
-    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <link rel="stylesheet" type="text/css" href="CSS/styleIndex.css">
 </head>
 <body>
 <!-- Encabezado con título, autores y descripción -->
