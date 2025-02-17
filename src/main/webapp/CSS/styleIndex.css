@@ -179,3 +179,34 @@ footer {
     background: #f8f9fa;
     border-radius: 0 0 10px 10px;
 }
+
+
+/* PARA LA TABLA */
+/* Estilos para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #a9e7fd;
+}
+
+tr:nth-child(even) {
+    background-color: #e4fffa;
+}
+
+tr:hover {
+    background-color: #d2e3fa;
+}
+
+.responsive-table {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
