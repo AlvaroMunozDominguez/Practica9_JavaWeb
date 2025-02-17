@@ -11,12 +11,12 @@
 <body>
 <!-- Encabezado con título, autores y descripción -->
 <header>
-    <h1>Título del Trabajo: Mi Proyecto Web en JSP</h1>
+    <h1>Proyecto Java Web</h1>
     <p>Autores: Adrián Chao Béjar <br>
                     María Zújar <br>
                     Maria Bernabé <br>
                     Alvaro Muñoz Dominguez</p>
-    <p>Descripción: Esta aplicación muestra un ejemplo de una página JSP que integra un formulario, navegación a otras páginas y un listado de elementos con diversos atributos.</p>
+    <p>Esta aplicación muestra un ejemplo de una página JSP que integra un formulario, navegación a otras páginas y un listado de elementos con diversos atributos.</p>
 </header>
 
 <!-- Sección del formulario para datos personales -->
@@ -36,8 +36,11 @@
             <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
         </div>
         <div>
+            <label for="img">Imagen de perfil:</label>
+            <input type="file" id="img" name="img" accept="image/*" required>
+        </div>
+        <div>
             <button type="submit">Enviar Datos</button>
-
         </div>
     </form>
 

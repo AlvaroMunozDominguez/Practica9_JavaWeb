@@ -22,25 +22,28 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
+    text-align: center; /* Centra los elementos dentro del header */
 }
 
 header h1 {
     margin: 0;
     color: #007BFF;
-    font-size: 28px;
+    font-size: 48px; /* Aumenta el tamaño del título principal */
 }
 
 header p {
     margin: 5px 0;
     color: #555;
     font-size: 16px;
-    text-align: left;
+    text-align: left; /* Alinea el texto de los párrafos a la izquierda */
 }
 
 /* ======== Navegación ======== */
 section h2 {
+    text-align: center; /* Centra el título de cada sección */
+    font-size: 28px; /* Tamaño más grande para los títulos de las secciones */
     color: #444;
+    margin-bottom: 20px;
 }
 
 section div {
