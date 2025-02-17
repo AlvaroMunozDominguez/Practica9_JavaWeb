@@ -3,6 +3,7 @@
 <%@ page import="java.time.LocalDate" %>
 <%@ page import="org.example.practica9.Persona" %>
 <%@ page import="fecha.JspCalendar" %>
+<%@ page import="org.example.practica9.Zodiaco" %>
 
 <jsp:useBean id="calendar" class="fecha.JspCalendar" />
 
@@ -14,6 +15,7 @@
     personas.add(new Persona("Pedro", "Martínez", LocalDate.of(2000, 11, 5)));
 
     request.setAttribute("personas", personas);
+
 %>
 
 <!DOCTYPE html>

@@ -36,8 +36,11 @@
             <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
         </div>
         <div>
+            <label for="img">Imagen de perfil:</label>
+            <input type="file" id="img" name="img" accept="image/*" required>
+        </div>
+        <div>
             <button type="submit">Enviar Datos</button>
-
         </div>
     </form>
 
