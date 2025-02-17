@@ -1,5 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="java.util.ArrayList, java.util.List" %>
+<%@ page import="java.time.LocalDate" %>
+<%@ page import="org.example.practica9.Persona" %>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -36,11 +38,11 @@
             <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
         </div>
         <div>
-            <label for="img">Imagen de perfil:</label>
-            <input type="file" id="img" name="img" accept="image/*" required>
+            <label for="imgUrl">Imagen de perfil:</label>
+            <input type="file" id="imgUrl" name="imgUrl" accept="image/*" required>
         </div>
         <div>
-            <button type="submit">Enviar Datos</button>
+            <button type="submit" onclick="agregarPersona()">Enviar Datos</button>
         </div>
     </form>
 
