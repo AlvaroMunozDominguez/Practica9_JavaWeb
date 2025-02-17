@@ -7,14 +7,17 @@ public class Persona {
     private String nombre;
     private String apellido;
     private LocalDate fechaNacimiento;
+    private String imagenPerfil;
 
     public Persona() {}
 
-    public Persona(String nombre, String apellido, LocalDate fechaNacimiento) {
+    public Persona(String nombre, String apellido, LocalDate fechaNacimiento, String imagenPerfil) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.fechaNacimiento = fechaNacimiento;
+        this.imagenPerfil = imagenPerfil;
     }
+
 
     public String getNombre() {
         return nombre;
@@ -38,6 +41,10 @@ public class Persona {
 
     public void setFechaNacimiento(LocalDate fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
+    }
+
+    public String getImagenPerfil() {
+        return imagenPerfil;
     }
 
     public int calcularEdad() {

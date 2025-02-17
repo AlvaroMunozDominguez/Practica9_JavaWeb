@@ -13,8 +13,8 @@ public class Zodiaco {
             case 3: return (dia < 21) ? "Piscis" : "Aries";
             case 4: return (dia < 20) ? "Aries" : "Tauro";
             case 5: return (dia < 21) ? "Tauro" : "Géminis";
-            case 6: return (dia < 21) ? "Géminis" : "Cáncer";
-            case 7: return (dia < 23) ? "Cáncer" : "Leo";
+            case 6: return (dia < 21) ? "Geminis" : "Cancer";
+            case 7: return (dia < 23) ? "Cancer" : "Leo";
             case 8: return (dia < 23) ? "Leo" : "Virgo";
             case 9: return (dia < 23) ? "Virgo" : "Libra";
             case 10: return (dia < 23) ? "Libra" : "Escorpio";
