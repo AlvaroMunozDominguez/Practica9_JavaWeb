@@ -55,44 +55,51 @@
 <!-- Sección con listado de elementos -->
 <section>
     <h2>Listado de Elementos</h2>
-    <p>A continuación se muestra un listado de 5 elementos. Dos elementos pertenecen al grupo "Países" y tres al grupo "Deportes". Cada elemento incluye atributos de texto (nombre y grupo), numérico, imagen y fecha.</p>
+    <p>A continuación se muestra un listado de 5 elementos. Dos elementos pertenecen al grupo "Países" y tres al grupo "Deportes".</p>
+
     <ul>
         <!-- Elementos del grupo "Países" -->
         <li>
-            <strong>Nombre:</strong> España <br>
-            <strong>Grupo:</strong> Países <br>
-            <strong>Valor Numérico:</strong> 34 <br>
-            <strong>Imagen:</strong> <img src="images/espana.png" alt="España" width="50"> <br>
-            <strong>Fecha:</strong> 2025-02-16
+            <img src="Images/spain.jpg" alt="España">
+            <div class="info">
+                <div><strong>Ciudad:</strong> Sevilla</div>
+                <div><strong>Pais:</strong> España</div>
+                <div><strong>Tasa PIB:</strong> 2,5%</div>
+            </div>
         </li>
         <li>
-            <strong>Nombre:</strong> Francia <br>
-            <strong>Grupo:</strong> Países <br>
-            <strong>Valor Numérico:</strong> 28 <br>
-            <strong>Imagen:</strong> <img src="images/francia.png" alt="Francia" width="50"> <br>
-            <strong>Fecha:</strong> 2025-02-16
+            <img src="Images/paris.jpg" alt="Francia">
+            <div class="info">
+                <div><strong>Ciudad:</strong> Paris</div>
+                <div><strong>Pais:</strong> Francia</div>
+                <div><strong>Tasa PIB:</strong> 0,7%</div>
+            </div>
         </li>
+
         <!-- Elementos del grupo "Deportes" -->
         <li>
-            <strong>Nombre:</strong> Baloncesto <br>
-            <strong>Grupo:</strong> Deportes <br>
-            <strong>Valor Numérico:</strong> 12 <br>
-            <strong>Imagen:</strong> <img src="images/baloncesto.png" alt="Baloncesto" width="50"> <br>
-            <strong>Fecha:</strong> 2025-02-16
+            <img src="Images/germany.jpg" alt="Alemania">
+            <div class="info">
+                <div><strong>Ciudad:</strong> Amsterdam</div>
+                <div><strong>Pais:</strong> Alemania</div>
+                <div><strong>Tasa PIB:</strong> -0,3%</div>
+            </div>
         </li>
         <li>
-            <strong>Nombre:</strong> Fútbol <br>
-            <strong>Grupo:</strong> Deportes <br>
-            <strong>Valor Numérico:</strong> 22 <br>
-            <strong>Imagen:</strong> <img src="images/futbol.png" alt="Fútbol" width="50"> <br>
-            <strong>Fecha:</strong> 2025-02-16
+            <img src="Images/Italy.jpg" alt="Italia">
+            <div class="info">
+                <div><strong>Ciudad:</strong> Milan</div>
+                <div><strong>Pais:</strong> Italia</div>
+                <div><strong>Tasa PIB:</strong> 0,9%</div>
+            </div>
         </li>
         <li>
-            <strong>Nombre:</strong> Tenis <br>
-            <strong>Grupo:</strong> Deportes <br>
-            <strong>Valor Numérico:</strong> 18 <br>
-            <strong>Imagen:</strong> <img src="images/tenis.png" alt="Tenis" width="50"> <br>
-            <strong>Fecha:</strong> 2025-02-16
+            <img src="Images/england.jpg" alt="Inglaterra">
+            <div class="info">
+                <div><strong>Ciudad:</strong> Londres</div>
+                <div><strong>Pais:</strong> Inglaterra</div>
+                <div><strong>Tasa PIB:</strong> 0,9%</div>
+            </div>
         </li>
     </ul>
 </section>
