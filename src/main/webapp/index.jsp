@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="java.util.ArrayList, java.util.List" %>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -11,14 +12,17 @@
 <!-- Encabezado con título, autores y descripción -->
 <header>
     <h1>Título del Trabajo: Mi Proyecto Web en JSP</h1>
-    <p>Autores: Juan Pérez, María Gómez</p>
+    <p>Autores: Adrián Chao Béjar <br>
+                    María Zújar <br>
+                    Maria Bernabé <br>
+                    Alvaro Muñoz Dominguez</p>
     <p>Descripción: Esta aplicación muestra un ejemplo de una página JSP que integra un formulario, navegación a otras páginas y un listado de elementos con diversos atributos.</p>
 </header>
 
 <!-- Sección del formulario para datos personales -->
 <section>
     <h2>Formulario de Datos Personales</h2>
-    <form action="procesarFormulario.jsp" method="post">
+    <form action="VerZodiaco.jsp" method="post">
         <div>
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" required>
@@ -35,6 +39,7 @@
             <button type="submit">Enviar Datos</button>
         </div>
     </form>
+
 </section>
 
 <!-- Sección de navegación -->
