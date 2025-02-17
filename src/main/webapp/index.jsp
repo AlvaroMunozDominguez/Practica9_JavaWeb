@@ -2,6 +2,37 @@
 <%@ page import="java.util.ArrayList, java.util.List" %>
 <%@ page import="java.time.LocalDate" %>
 <%@ page import="org.example.practica9.Persona" %>
+<%
+    // Obtener la lista de personas desde la sesión
+    List<Persona> personas = (List<Persona>) session.getAttribute("personas");
+
+    // Si la lista no existe en la sesión, la creamos y añadimos los valores iniciales
+    if (personas == null) {
+        personas = new ArrayList<>();
+        personas.add(new Persona("Carlos", "Gómez", LocalDate.of(1990, 3, 15), "Images/101.jpg"));
+        personas.add(new Persona("Ana", "López", LocalDate.of(1985, 7, 22), "Images/102.jpg"));
+        personas.add(new Persona("Pedro", "Martínez", LocalDate.of(2000, 11, 5), "Images/103.jpg"));
+        session.setAttribute("personas", personas); // Guardar la lista en la sesión
+    }
+
+    // Procesar datos del formulario (cuando el usuario ingresa una nueva persona)
+    String nombre = request.getParameter("nombre");
+    String apellido = request.getParameter("apellido");
+    String fechaStr = request.getParameter("fechaNacimiento");
+    String imgUrl = request.getParameter("imgUrl");
+
+    if (nombre != null && apellido != null && fechaStr != null && imgUrl != null) {
+        LocalDate fechaNacimiento = LocalDate.parse(fechaStr);
+        Persona nuevaPersona = new Persona(nombre, apellido, fechaNacimiento, imgUrl);
+        personas.add(nuevaPersona);
+        session.setAttribute("personas", personas); // Actualizar la lista en la sesión
+
+        // Evitar reenvío del formulario con F5
+        //response.sendRedirect("index.jsp");
+        //return;
+        session.setAttribute("personas", personas);
+    }
+%>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -24,7 +55,7 @@
 <!-- Sección del formulario para datos personales -->
 <section>
     <h2>Formulario de Datos Personales</h2>
-    <form action="VerZodiaco.jsp" method="post">
+    <form action="index.jsp" method="post">
         <div>
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" required>
@@ -39,10 +70,11 @@
         </div>
         <div>
             <label for="imgUrl">Imagen de perfil:</label>
-            <input type="file" id="imgUrl" name="imgUrl" accept="image/*" required>
+            <input type="file" id="imgUrl" name="imgUrl" accept="image/*" >
         </div>
         <div>
-            <button type="submit" onclick="agregarPersona()">Enviar Datos</button>
+            <button type="submit" >Enviar Datos</button>
+
         </div>
     </form>
 

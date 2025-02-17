@@ -8,13 +8,13 @@
 <jsp:useBean id="calendar" class="fecha.JspCalendar" />
 
 <%
-    // Lista de personas con imagen de perfil
-    List<Persona> personas = new ArrayList<>();
-    personas.add(new Persona("Carlos", "Gómez", LocalDate.of(1990, 3, 15), "Images/101.jpg"));
-    personas.add(new Persona("Ana", "López", LocalDate.of(1985, 7, 22), "Images/102.jpg"));
-    personas.add(new Persona("Pedro", "Martínez", LocalDate.of(2000, 11, 5), "Images/103.jpg"));
+    // Obtener la lista de personas desde la sesión
+    List<Persona> personas = (List<Persona>) session.getAttribute("personas");
 
-    request.setAttribute("personas", personas);
+    // Evitar error si no hay personas en sesión
+    if (personas == null) {
+        personas = new ArrayList<>();
+    }
 
 %>
 
