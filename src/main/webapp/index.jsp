@@ -4,7 +4,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Página de Bienvenida</title>
+    <title>Inicio</title>
     <!-- Se vincula el archivo CSS externo -->
     <link rel="stylesheet" type="text/css" href="CSS/styleIndex.css">
 </head>
@@ -55,58 +55,6 @@
         <br>
         <a href="VerTabla.jsp">Listar Tabla</a>
     </div>
-</section>
-
-<!-- Sección con listado de elementos -->
-<section>
-    <h2>Listado de Elementos</h2>
-    <p>A continuación se muestra un listado de 5 elementos. Dos elementos pertenecen al grupo "Países" y tres al grupo "Deportes".</p>
-
-    <ul>
-        <!-- Elementos del grupo "Países" -->
-        <li>
-            <img src="Images/spain.jpg" alt="España">
-            <div class="info">
-                <div><strong>Ciudad:</strong> Sevilla</div>
-                <div><strong>Pais:</strong> España</div>
-                <div><strong>Tasa PIB:</strong> 2,5%</div>
-            </div>
-        </li>
-        <li>
-            <img src="Images/paris.jpg" alt="Francia">
-            <div class="info">
-                <div><strong>Ciudad:</strong> Paris</div>
-                <div><strong>Pais:</strong> Francia</div>
-                <div><strong>Tasa PIB:</strong> 0,7%</div>
-            </div>
-        </li>
-
-        <!-- Elementos del grupo "Deportes" -->
-        <li>
-            <img src="Images/germany.jpg" alt="Alemania">
-            <div class="info">
-                <div><strong>Ciudad:</strong> Amsterdam</div>
-                <div><strong>Pais:</strong> Alemania</div>
-                <div><strong>Tasa PIB:</strong> -0,3%</div>
-            </div>
-        </li>
-        <li>
-            <img src="Images/Italy.jpg" alt="Italia">
-            <div class="info">
-                <div><strong>Ciudad:</strong> Milan</div>
-                <div><strong>Pais:</strong> Italia</div>
-                <div><strong>Tasa PIB:</strong> 0,9%</div>
-            </div>
-        </li>
-        <li>
-            <img src="Images/england.jpg" alt="Inglaterra">
-            <div class="info">
-                <div><strong>Ciudad:</strong> Londres</div>
-                <div><strong>Pais:</strong> Inglaterra</div>
-                <div><strong>Tasa PIB:</strong> 0,9%</div>
-            </div>
-        </li>
-    </ul>
 </section>
 
 <footer>
