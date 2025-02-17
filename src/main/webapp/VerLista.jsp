@@ -15,7 +15,7 @@
 <!-- Sección con listado de elementos -->
 <section>
     <h2>Listado de Elementos</h2>
-    <p>A continuación se muestra un listado de 5 elementos. Dos elementos pertenecen al grupo "Países" y tres al grupo "Deportes".</p>
+    <p>Listado de elementos de distintos tipos</p>
 
     <ul>
         <!-- Elementos del grupo "Países" -->
