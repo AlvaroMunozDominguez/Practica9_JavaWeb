@@ -19,11 +19,10 @@
     String nombre = request.getParameter("nombre");
     String apellido = request.getParameter("apellido");
     String fechaStr = request.getParameter("fechaNacimiento");
-    String imgUrl = request.getParameter("imgUrl");
 
-    if (nombre != null && apellido != null && fechaStr != null && imgUrl != null) {
+    if (nombre != null && apellido != null && fechaStr != null) {
         LocalDate fechaNacimiento = LocalDate.parse(fechaStr);
-        Persona nuevaPersona = new Persona(nombre, apellido, fechaNacimiento, imgUrl);
+        Persona nuevaPersona = new Persona(nombre, apellido, fechaNacimiento, "Images/default.jpg");
         personas.add(nuevaPersona);
         session.setAttribute("personas", personas); // Actualizar la lista en la sesión
 
@@ -46,9 +45,9 @@
 <header>
     <h1>Proyecto Java Web</h1>
     <p>Autores: Adrián Chao Béjar <br>
-                    María Zújar <br>
-                    Maria Bernabé <br>
-                    Alvaro Muñoz Dominguez</p>
+        María Zújar <br>
+        Maria Bernabé <br>
+        Alvaro Muñoz Dominguez</p>
     <p>Esta aplicación muestra un ejemplo de una página JSP que integra un formulario, navegación a otras páginas y un listado de elementos con diversos atributos.</p>
 </header>
 
@@ -74,7 +73,6 @@
         </div>
         <div>
             <button type="submit" >Enviar Datos</button>
-
         </div>
     </form>
 
