@@ -1,5 +1,7 @@
 package org.example.practica9;
 
+import fecha.JspCalendar;
+
 import java.time.LocalDate;
 import java.time.Period;
 
@@ -47,9 +49,28 @@ public class Persona {
         return imagenPerfil;
     }
 
-    public int calcularEdad() {
+    /*public int calcularEdad() {
         return Period.between(fechaNacimiento, LocalDate.now()).getYears();
+    }*/
+
+    public int calcularEdad() {
+    JspCalendar calendar = new JspCalendar(); // Crear instancia de JspCalendar
+
+    int añoActual = calendar.getYear();
+    int mesActual = calendar.getMonthInt();
+    int diaActual = calendar.getDayOfMonth();
+
+    // Calcular la edad
+    int edad = añoActual - fechaNacimiento.getYear();
+
+    // Ajustar si el cumpleaños aún no ha pasado en el año actual
+    if (mesActual < fechaNacimiento.getMonthValue() ||
+        (mesActual == fechaNacimiento.getMonthValue() && diaActual < fechaNacimiento.getDayOfMonth())) {
+        edad--;
     }
+
+    return edad;
+}
 
     public String getSignoZodiaco() {
         return Zodiaco.obtenerSigno(fechaNacimiento);
