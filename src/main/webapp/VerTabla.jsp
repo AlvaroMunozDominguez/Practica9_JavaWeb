@@ -1,19 +1,34 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="java.util.ArrayList, java.util.List" %>
 <html>
 <head>
-    <title>VerTabla</title>
-    <!-- Enlace al archivo CSS externo -->
+    <title>Ver Tabla</title>
     <link rel="stylesheet" type="text/css" href="CSS/styleIndex.css">
 </head>
 <body>
 
-<!-- Sección con listado de elementos -->
-<section>
-    <h2>Listado de Elementos</h2>
-    <p>Listado de países y continentes (sin imágenes)</p>
+<%
+    // Lista de países [Ciudad, País, Tasa PIB]
+    List<String[]> paises = new ArrayList<>();
+    paises.add(new String[]{"Sevilla", "España", "2,5%"});
+    paises.add(new String[]{"París", "Francia", "0,7%"});
+    paises.add(new String[]{"Roma", "Italia", "1,2%"});
+    paises.add(new String[]{"Berlín", "Alemania", "2,0%"});
 
-    <!-- Tabla con los elementos de Países -->
-    <h3>Países</h3>
+    // Lista de continentes [Ciudad, Continente, Tasa PIB]
+    List<String[]> continentes = new ArrayList<>();
+    continentes.add(new String[]{"Tokio", "Asia", "3,2%"});
+    continentes.add(new String[]{"Cairo", "África", "-0,1%"});
+    continentes.add(new String[]{"Buenos Aires", "América", "1,5%"});
+    continentes.add(new String[]{"Sídney", "Oceanía", "2,8%"});
+
+    // Guardar en sesión si se usará en otra página
+    session.setAttribute("paises", paises);
+    session.setAttribute("continentes", continentes);
+%>
+
+<section>
+    <h2>Listado de Países</h2>
     <div class="responsive-table">
         <table>
             <thead>
@@ -24,23 +39,20 @@
             </tr>
             </thead>
             <tbody>
-            <!-- Elementos del grupo "Países" -->
+            <% for (String[] pais : paises) { %>
             <tr>
-                <td>Sevilla</td>
-                <td>España</td>
-                <td>2,5%</td>
+                <td><%= pais[0] %></td> <!-- Ciudad -->
+                <td><%= pais[1] %></td> <!-- País -->
+                <td><%= pais[2] %></td> <!-- Tasa PIB -->
             </tr>
-            <tr>
-                <td>Paris</td>
-                <td>Francia</td>
-                <td>0,7%</td>
-            </tr>
+            <% } %>
             </tbody>
         </table>
     </div>
+</section>
 
-    <!-- Tabla con los elementos de Continentes -->
-    <h3>Continentes</h3>
+<section>
+    <h2>Listado de Continentes</h2>
     <div class="responsive-table">
         <table>
             <thead>
@@ -51,22 +63,13 @@
             </tr>
             </thead>
             <tbody>
-            <!-- Elementos del grupo "Continentes" -->
+            <% for (String[] continente : continentes) { %>
             <tr>
-                <td>Tokio</td>
-                <td>Asia</td>
-                <td>3,2%</td>
+                <td><%= continente[0] %></td> <!-- Ciudad -->
+                <td><%= continente[1] %></td> <!-- Continente -->
+                <td><%= continente[2] %></td> <!-- Tasa PIB -->
             </tr>
-            <tr>
-                <td>Cairo</td>
-                <td>África</td>
-                <td>-0,1%</td>
-            </tr>
-            <tr>
-                <td>Buenos Aires</td>
-                <td>América</td>
-                <td>1,5%</td>
-            </tr>
+            <% } %>
             </tbody>
         </table>
     </div>
