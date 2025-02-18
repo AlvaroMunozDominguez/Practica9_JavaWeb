@@ -35,8 +35,6 @@
                 <div><strong>Tasa PIB:</strong> 0,7%</div>
             </div>
         </li>
-
-        <!-- Elementos del grupo "Deportes" -->
         <li>
             <img src="Images/germany.jpg" alt="Alemania">
             <div class="info">
@@ -59,6 +57,29 @@
                 <div><strong>Ciudad:</strong> Londres</div>
                 <div><strong>Pais:</strong> Inglaterra</div>
                 <div><strong>Tasa PIB:</strong> 0,9%</div>
+            </div>
+        </li>
+
+        <!-- Elementos del grupo "Deportes" -->
+        <li>
+            <img src="Images/basket.jpg" alt="Baloncesto">
+            <div class="info">
+                <div><strong>Número de jugadores:</strong> 5 jugadores</div>
+                <div><strong>Duración del partido:</strong> 40 minutos</div>
+            </div>
+        </li>
+        <li>
+            <img src="Images/football.jpg" alt="Fútbol">
+            <div class="info">
+                <div><strong>Número de jugadores:</strong> 11 jugadores</div>
+                <div><strong>Duración del partido:</strong> 90 minutos</div>
+            </div>
+        </li>
+        <li>
+            <img src="Images/balonmano.jpg" alt="Balonmano">
+            <div class="info">
+                <div><strong>Número de jugadores:</strong> 7 jugadores</div>
+                <div><strong>Duración del partido:</strong> 60 minutos</div>
             </div>
         </li>
     </ul>
